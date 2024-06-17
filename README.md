@@ -1,5 +1,5 @@
 # PI Pwn
-
+Note: This PI-Pwn was released by Stooged on May-23-2024 that works great on some ps4 slim models.
 This is a script to setup <a href=https://github.com/TheOfficialFloW/PPPwn>PPPwn</a> and <a href=https://github.com/xfangfang/PPPwn_cpp>PPPwn_cpp</a> on the raspberry pi and run <a href=https://github.com/GoldHEN/GoldHEN>GoldHen</a> on the PS4 fw 11.0, 10.01, 10.00, 9.60, 9.00<br>
 It also supports internet access after pwn and access to ftp, klog and binloader servers launched by goldhen.<br>
 A dns blocker is also installed and used to prevent updates.<br>
@@ -34,11 +34,14 @@ Place the sd card into the raspberry pi, boot it and connect it to the internet 
 <br>
 
 ```sh
+sudo apt upgrade
 sudo apt update
 sudo apt install git -y
+
 sudo rm -f -r PI-Pwn
 sudo systemctl stop pipwn
 git clone https://github.com/hejran7/PI-Pwn
+
 sudo mkdir /boot/firmware/
 cd PI-Pwn
 sudo cp -r PPPwn /boot/firmware/
